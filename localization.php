@@ -147,12 +147,12 @@ class Localization {
    {      
       if(array_key_exists($string, static::$translations))
       {
-         return is_null($args) ? static::$translations[$string] : vsprintf(static::$translations[$string], $args);
+         return is_array($args) ? vsprintf(static::$translations[$string], $args) : static::$translations[$string];
       }
       
       file_put_contents(static::$translationFile, PHP_EOL . "{$string} = \"{$string}\"", FILE_APPEND | LOCK_EX);      
       
-      return is_null($args) ? static::$translations[$string] = $string : vsprintf($string, $args);    
+      return is_array($args) ? vsprintf($string, $args) : static::$translations[$string] = $string;    
    }
    
 }
