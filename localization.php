@@ -34,7 +34,6 @@ class Localization {
       else
       {
          printf('Directory <strong>%s</strong> not exists, check path setting', dirname(static::$file)); 
-         
          exit;
       }  
    }
@@ -120,11 +119,25 @@ class Localization {
    /**
    * Get translations
    * 
-   * @return array
+   * @param array $strings
+   * @return {$string|$string[]}
    */
-   public function getTranslations()
+   public function getTranslations($strings = [])
    {
-      return static::$translations;
+      if(empty($strings))
+      {
+         return static::$translations;
+      }
+      
+      $translations = [];
+      
+      foreach($strings as $string)
+      {
+         $translations[$string] = isset(static::$translations[$string]) ? static::$translations[$string] : $this->translate($string);            
+      }
+      
+      return $translations;
+      
    }
    
    /**
@@ -132,9 +145,9 @@ class Localization {
    * 
    * @return json
    */ 
-   public function getJson($options = JSON_UNESCAPED_UNICODE)
+   public function getJson($strings = [], $options = JSON_UNESCAPED_UNICODE)
    {
-      return json_encode(static::$translations, $options);   
+      return json_encode($this->getTranslations($strings), $options);   
    }
    
    /**
