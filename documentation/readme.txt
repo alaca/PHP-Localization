@@ -3,8 +3,8 @@ Setting it up, dont forget to include the class first
 <?php 
 
 Localization::settings([
-   'path'  => 'translations', // translations directory path
-   'input' => 'language',     // url parameter
+   'path'  => 'translations', // translations directory path | translations is default
+   'input' => 'language',     // url parameter | language is default
    'languages' => [           // languages, first language is default
       'en' => 'English',
       'de' => 'Deutsch',
