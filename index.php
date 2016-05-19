@@ -40,7 +40,7 @@ $localization = Localization::settings([
       <?php echo __('Translate function can take multiple params like %s and %s', ['this', 'that']); ?>
       <br /><br />
       
-      <?php echo __('You can call it like this'); ?> Localization::instance()->translate('You can call it like this');
+      <?php echo Localization::instance()->translate('You can call it like this'); ?> ;
       <br /><br />
       
       
