@@ -157,7 +157,9 @@ class Localization {
    
 }
 
-
+/**
+* helper function
+*/
 function __($string, $args = null)
 {   
    return Localization::instance()->translate($string, $args);
