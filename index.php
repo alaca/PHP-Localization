@@ -41,13 +41,16 @@ $localization = Localization::settings([
    
    <hr />
    
+   Usage: 
    <?php echo __('Current language key code is %s', [$localization->getCurrentLanguage()]); ?>
    <br /><br />
    
+   or 
    <?php echo __('Translate function can take multiple params like %s and %s', ['this', 'that']); ?>
    <br /><br />
    
-   <?php echo Localization::instance()->translate('You can call it like this'); ?> ;
+   or 
+   <?php echo Localization::instance()->translate('Welcome to our site'); ?> ;
    <br /><br />
    
    
