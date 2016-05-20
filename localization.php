@@ -60,14 +60,8 @@ class Localization {
    */
    public static function settings($settings = [])
    { 
-      $defaults = [
-         'path'  => 'translations', // translations directory path
-         'input' => 'language',     // url parameter
-         'languages' => [           // languages
-            'en' => 'English'
-         ]
-      ];  
-   
+      $defaults = require 'config.php';
+      
       static::$settings = (empty($settings)) ? $defaults : array_merge($defaults, $settings);
       
       return static::instance();
@@ -95,6 +89,11 @@ class Localization {
    */
    public function getCurrentLanguage()
    {
+      if(false == is_null(static::$settings['language']))
+      {
+         return static::$settings['language'];      
+      }
+      
       if(isset($_GET[static::$settings['input']]))
       {
          if(array_key_exists($_GET[static::$settings['input']], $this->getLanguages()))
