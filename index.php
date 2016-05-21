@@ -19,10 +19,9 @@ $localization = Localization::settings([
    <title><?php echo __('Site title'); ?></title>
    <script>
    
-      /* method getJson() can be handy to translate javascript */
-      var translations = <?php echo $localization->getJson(['Welcome to our site', 'Site title']); ?>;
-      
-      /* then you can use it like this */
+      /* method getJson() can be used for javascript translations */
+      var translations = <?php echo $localization->getJson(['Welcome to our site']); ?>;
+
       console.log(translations['Welcome to our site']);
       
    </script>
