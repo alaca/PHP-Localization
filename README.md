@@ -1,1 +1,1 @@
-# PHP Localization
+# PHP Localization Library
