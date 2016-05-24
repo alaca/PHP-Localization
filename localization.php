@@ -33,7 +33,7 @@ class Localization {
       }
       else
       {
-         printf('Directory <strong>%s</strong> not exists, check path setting', dirname(static::$file)); 
+         printf('Directory <strong>%s</strong> not exists, check path setting', dirname(static::$translationFile)); 
          exit;
       }  
    }
