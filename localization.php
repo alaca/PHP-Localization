@@ -1,4 +1,13 @@
-<?php 
+<?php
+/**
+ * PHP Localization Library
+ * 
+ * Translate application texts using INI files
+ * 
+ * @copyright 2016
+ * @author Ante Laca <ante.laca@gmail.com>
+ * 
+ */
 
 class Localization {
    
