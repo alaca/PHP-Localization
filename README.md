@@ -17,10 +17,6 @@ Localization::settings([
 ?>
 ```
 
-If translation file not exists, it will be created automatically
-
-
-
 Translating strings
 ```php
 <?php echo __('Site title'); ?>
