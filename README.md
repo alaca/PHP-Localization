@@ -1,8 +1,16 @@
 # PHP Localization Library
 
-Setting it up
+
+It can determine the current page language from a given request variable or default to the first language in an array of supported language settings defined in the config.php script.
+
+The class loads the texts for the current language from a INI file.
+
+It also returns the application strings translated for the current language. The string may be formatted with optional parameters as defined for sprintf.
+
+If the chosen language translations file does not exist, the class writes a new file for that language based on the default language texts.
+
+###Setting it up
 ```php
-<?php 
 
 Localization::settings([
    'path'  => 'translations', // translation files directory path | translations is default
@@ -14,14 +22,13 @@ Localization::settings([
    ]   
 ]);
 
-?>
 ```
 
-Translating strings
+###Translating strings
 ```php
-<?php echo __('Site title'); ?>
+ echo __('Site title'); 
 
-<?php echo __('Site %s', ['title']); ?>
+ echo __('Site %s', ['title']); 
 
-<?php echo Localization::instance()->translate('Site %s', ['title']); ?> 
+ echo Localization::instance()->translate('Site %s', ['title']); 
 ```
