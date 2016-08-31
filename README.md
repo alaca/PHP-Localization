@@ -5,7 +5,7 @@ Setting it up
 <?php 
 
 Localization::settings([
-   'path'  => 'translations', // translations directory path | translations is default
+   'path'  => 'translations', // translation files directory path | translations is default
    'input' => 'language',     // url parameter | language is default
    'languages' => [           // languages, first language is default
       'en' => 'English',
