@@ -5,10 +5,10 @@ It can determine the current page language from a given request variable or defa
 If the chosen language translations file does not exist, the class writes a new file for that language based on the default language texts.
 
 
-###Setting it up
+###Setting it up config.php
 ```php
 
-Localization::settings([
+return [
    'path'  => 'translations', // translation files directory path | translations is default
    'input' => 'language',     // url parameter | language is default
    'languages' => [           // languages, first language is default
@@ -16,7 +16,7 @@ Localization::settings([
       'de' => 'Deutsch',
       'it' => 'Italiano'
    ]   
-]);
+];
 
 ```
 
