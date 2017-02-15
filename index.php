@@ -3,14 +3,7 @@
 // include localization class
 include 'localization.php';
 
-// settings
-$localization = Localization::settings([
-   'languages' => [
-      'en' => 'English',
-      'de' => 'Deutsch',
-      'it' => 'Italiano'
-   ]   
-]);
+$localization = Localization::instance();
 
 ?>
 <html lang="<?php echo $localization->getCurrentLanguage(); ?>">
