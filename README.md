@@ -1,6 +1,6 @@
-# PHP Localization Library###
+# PHP Localization Library
 
-###Setting it up config.php###
+### Setting it up config.php
 ```php
 
 return [
@@ -15,7 +15,7 @@ return [
 
 ```
 
-###Translating strings###
+### Translating strings
 ```php
  echo __('Site title'); 
 
